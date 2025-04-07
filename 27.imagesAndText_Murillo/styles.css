@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Romie';
+  src: url('../fonts/Romie-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Romie';
+  src: url('../fonts/Romie-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: 'Romie', serif;
+  background-color: #000;
+  color: #fff;
+  overflow-y: scroll;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.image-section img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.text-overlay {
+  position: fixed;
+  bottom: 50%; /* vertical alignment in lower third */
+  right: 4%; /* aligned to the right */
+  transform: translateY(50%);
+  width: 250px;
+  text-align: center;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  z-index: 1000;
+  pointer-events: none;
+  font-style: italic;
+}
